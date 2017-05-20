@@ -7,77 +7,92 @@
     <title>Get The Weather!</title>
     <meta name="description" content="weather">
     <meta name="viewport" content="width=device-width">
-
+    <link rel="stylesheet" href="css/weather.css">
 </head>
 
 <body>
+<div id="everything">
     <header>
+
         <div id="title-bar">
-            <div class="logo"></div>
+            <div class="logo">
             <img src="http://placehold.it/70x70" alt="dice-logo">
-            <h1>Feeling Lucky?</h1>
+            <div class="logo-title">
+                <h1>Feeling Lucky?</h1>
+                </div>
+            </div>
+            <div class="spaceholder">
+            </div>
+            <div class="sub-title">
+            <h3>Local Weather</h3>
+            </div>
+
         </div>
         <div id="nav-bar">
             <nav>
-                <ul>
-                    <li> <a href="weather-plan.html">Home</a> </li>
 
-                    <li> <a href="#">Franklin</a></li>
+                    <div class="link"><a href="weather-plan.html">Home</a> </div>
 
-                    <li> <a href="greenville.html">Greenville</a></li>
+                    <div class="link"><a href="#">Franklin</a></div>
 
-                    <li> <a href="springfield.html">Springfield</a></li>
+                    <div class="link"><a href="greenville.html">Greenville</a></div>
 
-                    <li> <a href="search.html">Search</a></li>
+                    <div class="link"><a href="springfield.html">Springfield</a></div>
 
-                </ul>
+                    <div class="link"><a href="search.html">Search</a></div>
+
             </nav>
         </div>
     </header>
     <main>
 
-        <div id="conditions">
-            <div class="col-title">
-                <div class="icon">
-                    <img src="http://placehold.it/20x20" alt="location logo">
-                </div>
-                <h2> Current Condition</h2>
-
-            </div>
-            <div class="wind">
-                <h2> wind</h2>
-                <div class="speed">
-                    <p> 1- 5 MPH</p>
-                </div>
-                <div class="direction">
-                    <p> SouthWest</p>
-                </div>
-            </div>
-
-            <div class="Precipitation">
-                <h2>Precipitation</h2>
-                <p> 0 in</p>
-            </div>
-        </div>
-
-
-        <div id="quick-look">
-            <div class="background">
-
-                <img src="http://placehold.it/200x400" alt="col-background"> </div>
-
+        <div id="content">
+            <div id="current-condition">
                 <div class="col-title">
-                    <div class="icon">
-                        <img src="http://placehold.it/20x20" alt="location logo">
+
+                    <h2>
+                        <img src="http://placehold.it/20x20" alt="location logo"> Current Condition
+                    </h2>
+
+                </div>
+                <div class="wind">
+                    <h2> Wind</h2>
+
+                    <div class="wind-info">
+                        <p> 1- 5 MPH</p>
+                        <p>SouthWest</p>
                     </div>
-                    <h2> Franklin, ID</h2>
+                </div>
+
+                <div class="precipitation">
+                    <div class="precip-t">
+                        <h2>Precipitation</h2>
+                    </div>
+                    <div class="inches">
+                        <p>0 IN</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="quick-look">
+
+
+                <div class="title">
+
+                    <h2>
+                        <img src="http://placehold.it/20x20" alt="location logo"> Franklin, ID
+                    </h2>
 
                 </div>
                 <div class="temperature">
-                    <h2>17</h2>
+                    <div class="cur-temp">
+                        <h2>17</h2>
+                    </div>
                     <div class="weather">
-                        <img src="http://placehold.it/10x10" alt="weathericon">
-                        <h3>17/3</h3>
+                        <h3><img src="http://placehold.it/10x10" alt="weathericon"> 17/3
+                        </h3>
 
                     </div>
 
@@ -88,28 +103,30 @@
 
             <div id="forecast">
                 <div class="col-title">
-                    <div class="icon">
-                        <img src="http://placehold.it/20x20" alt="location logo">
-                    </div>
-                    <h2> Hourly Forecast</h2>
+
+
+
+                    <h2>
+                        <img src="http://placehold.it/20x20" alt="location logo"> Hourly Forecast
+                    </h2>
 
                 </div>
                 <div class="hour-by-hour">
-                <h3>6:00 AM : 69</h3>
-                <h3>7:00 AM : 72</h3>
-                <h3>8:00 AM : 74</h3>
-                <h3>9:00 AM : 77</h3>
-                <h3>10:00 AM : 79</h3>
-                <h3>11:00 AM : 81</h3>
-                <h3>12:00 AM : 84</h3>
-                <h3>1:00 PM : 86</h3>
-                <h3>2:00 PM : 88</h3>
-                <h3>3:00 PM : 90</h3>
-                <h3>4:00 PM : 90</h3>
-                <h3>5:00 PM : 85</h3>
-                <h3>6:00 PM : 83</h3>
-                <h3>7:00 PM : 79</h3>
-                <h3>6:00 PM : 74</h3>
+                    <h3>6:00 AM : 69</h3>
+                    <h3>7:00 AM : 72</h3>
+                    <h3>8:00 AM : 74</h3>
+                    <h3>9:00 AM : 77</h3>
+                    <h3>10:00 AM : 79</h3>
+                    <h3>11:00 AM : 81</h3>
+                    <h3>12:00 AM : 84</h3>
+                    <h3>1:00 PM : 86</h3>
+                    <h3>2:00 PM : 88</h3>
+                    <h3>3:00 PM : 90</h3>
+                    <h3>4:00 PM : 90</h3>
+                    <h3>5:00 PM : 85</h3>
+                    <h3>6:00 PM : 83</h3>
+                    <h3>7:00 PM : 79</h3>
+                    <h3>6:00 PM : 74</h3>
 
 
 
@@ -127,7 +144,8 @@
             <a href="http://andersonnw.github.io/">Link to Homepage</a>
         </div>
     </footer>
-
+    </div>
+    </div>
 
 </body>
 
