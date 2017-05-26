@@ -1,109 +1,207 @@
-@media all and (max-width: 400px) {
-    #everthing{
-        flex-flow: column nowrap;
-    }
-    #content{
-        flex-direction: column;
-    }
-    #quick-look {
-        order: -2;
-        width: 400px;
-    }
-    #nav-bar {
-        position: fixed;
-        bottom: 0;
-        width: 90%;
-        margin: 0;
-        height: 60px;
 
-    }
-    .col-title{
-        display: none;
-    }
-    #forecast{
-       display: none;
-    }
 
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+
+@import url('https://fonts.googleapis.com/css?family=Helvetica');
+/*retriive font data */
+
+
+
+* {
+    box-sizing: border-box;    /* changes width property to total width instead of content width */
 
 }
 
-#everything{
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figcaption,
+figure {
+    display: block;   /* just in case we have any older browsers that don't recognize the HTML5 semantic elements */
+}
+
+body {
+    margin: 0;  /* remove any margin from body to avoid unsightly gaps. */
+    padding: 0;  /* ditto for padding  */
+
+}
+
+.rotate25 {
+    transform: rotate(25deg);
+    display: inline-block;
+}
+
+/* rotate the logo */
+
+.sub-title {
+padding-left: 200px;
+} /* Padding to move the text right*/
+
+
+
+
+
+#nav-bar {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color:  #F07C6C;
+}
+
+/*adjust nav bar position */
+
+
+nav{
+    height: 50px;
+
+}
+
+nav > ul {
+    list-style-type: none;
+    padding: 0px;
     display: flex;
-    flex-flow: column wrap;
-}
+    justify-content: space-around;
+} /* remove points and adjust position */
 
-#title-bar{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-.logo{
-    width: auto;
-    flex: 1 auto;
-    display: flex;
-}
-.sub-title{
-position: relative;
-    left: 175px;
-}
+footer{
+    padding-bottom: 50px;
+    background-color: #A6D8DB;
+} /*add space so nav bar doesn't cover footer, and background color*/
+
+
 
 #content {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/homework/weather/images/sunny-winter.jpg")
+} /*put items vertically and center it*/
 
-}
+
+
 #current-condition{
     flex: 1 auto;
     display: flex;
     flex-flow: column wrap;
+    order: 3;
+
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 5px;
+
+} /*provide the box to be organized and position it with the temperature*/
+
+.title {
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 5px;
 }
+
 .wind{
     display: flex;
     justify-content: space-around;
 }
 .precipitation{
- display: flex;
+    display: flex;
     justify-content: space-around;
 }
+
+/* adjust the diplay so the text is positioned with the title*/
+
+
+
 #quick-look{
-    background-image: url(http://placehold.it/200x200);
+
     flex: 1 auto;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
 }
+/* organize information into a box*/
+
+
+
 .temperature{
-    width: 175px;
-    height: 200px;
+
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    background-color: white;
+
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 5px;
 }
+/* reorganize the temperature information  for the quick look box*/
+
 
 #forecast{
-    flex: 1 auto;
+    display: none;
+}
+/*hide the data*/
 
+main {
+    background-image: url("images/sunny-winter.jpg");
+    background-size: cover;
 }
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Sansita, "second choice", generic-family;
+}
+h1{
+    font-size: 2em;
+}
+h1 a {
+font-size: 1em;
+}
+
+/*change font for headings */
+
+p {
+    font-family: Helvetica, "second choice", generic-family;
+}
+/* change font for other text*/
+
+* {
+font-size: 20px;
+}
+/* change base font size */
+
+
+nav a:link {
+    text-decoration: none;
+    color: #47556F;
+}
+nav a:visited {
+    text-decoration: none;
+    color: #4A4653;
+}
+nav a:hover {
+    text-decoration: none;
+    color: #E7EF61;
+}
+nav a:active {
+    color: #A6D8DB;
+}
+/* changesthe links  color according to action*/
+
 header{
-    background-color: gray;
+    background-color: #A6D8DB;
+    padding-top: 1px;
 }
-footer{
-    height: 50px;
-    background-color: gray;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-}
-nav{
-    background-color: azure;
-    height: 60px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-p{
-    font-size: 18pt;
-}
+/*change background colors*/
+
+/* Makes the page responsive*/
 
