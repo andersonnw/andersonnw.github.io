@@ -78,7 +78,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("/homework/weather/images/sunny-winter.jpg")
+    background-image: url("/homework/weather/images/sunny-winter.jpg");
 } /*put items vertically and center it*/
 
 
@@ -137,12 +137,19 @@ footer{
     margin: .2em auto;
     border: 1px solid;
     border-radius: 5px;
+    width: 200px;
+
+
 }
 /* reorganize the temperature information  for the quick look box*/
 
 
 #forecast{
     display: none;
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 5px;
 }
 /*hide the data*/
 
@@ -201,7 +208,90 @@ header{
     background-color: #A6D8DB;
     padding-top: 1px;
 }
+
 /*change background colors*/
+
+.cur-temp > h2{
+    font-size: 2em;
+}
+.title > h2 {
+    font-size: 1.3em;
+}
+
+/*adjust various text sizes*/
+
+
 
 /* Makes the page responsive*/
 
+@media (min-width: 500px) {
+    #forecast {
+    display: initial;
+        flex: 1 0 30%;
+    }
+    /*displays  hourly forecast*/
+
+    #content {
+        flex-flow: row wrap;
+        align-items: stretch;
+
+    }
+    /*Adjust flexbox direction*/
+    #nav-bar {
+        position: static;
+    }
+    /*moves the nav bar back to top of page*/
+
+    .col-title > h2{
+        font-size: 1.3em;
+    }
+
+    /* adjusts title boxes. */
+    #current-condition {
+    order: -2;
+        flex: 1 0 30%;
+    }
+    #quick-look {
+        flex: 1 0 30%
+    }
+
+/*adjust the content boxes*/
+
+    #quick-look {
+        background-image: url("/homework/weather/images/sunny-winter.jpg")
+    }
+    #content {
+        background-image: none;
+        background-color: #47556F;
+    }
+
+
+/* add the background image to the middle column*/
+    #content > div{
+        max-height: 350px;
+    }
+
+    /*set the max height for the columns and lets the Forecast column into scolling*/
+
+    #forecast{
+        overflow: auto;
+    }
+    .hour > ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .hour ul li {
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+/*    adjust the forecast list*/
+    body {
+       width: 95%%;
+        max-width: 775px;
+        margin: auto;
+    }
+
+    /* limits the sets the mad body width*/
+}
