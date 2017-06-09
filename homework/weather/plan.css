@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+
+@import url('https://fonts.googleapis.com/css?family=Helvetica');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+/*retriive font data */
+
+
+.mainclr {
+    height: 100px;
+    width: 100px;
+    background-color: #186DB4;
+}
+
+.navclr {
+    height: 100px;
+    width: 100px;
+    background-color: #B2D7F5;
+
+}
+
+.contentclr {
+    height: 100px;
+    width: 100px;
+    background-color: #599FD9;
+
+}
+
+/*Css for the color samples*/
+
+.overpass {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.droid {
+    font-family: 'Droid Sans', sans-serif;
+}

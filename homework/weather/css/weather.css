@@ -287,11 +287,11 @@ header{
 
 
 /*    adjust the forecast list*/
+
     body {
-       width: 95%%;
+        width: 95%;
         max-width: 775px;
         margin: auto;
     }
-
-    /* limits the sets the mad body width*/
+/*limits the sets the mad body width*/
 }
