@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+
+
+
+* {
+    box-sizing: border-box;    /* changes width property to total width instead of content width */
+
+    font-family: 'Droid Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*adjusts the font*/
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figcaption,
+figure {
+    display: block;   /* just in case we have any older browsers that don't recognize the HTML5 semantic elements */
+}
+
+body {
+    margin: 0;  /* remove any margin from body to avoid unsightly gaps. */
+    padding: 0;  /* ditto for padding  */
+
+}
+
+.rotate25 {
+    transform: rotate(25deg);
+    display: inline-block;
+}
+
+/* rotate the logo */
+
+.sub-title {
+    padding-left: 200px;
+} /* Padding to move the text right*/
+
+
+
+
+
+#nav-bar {
+
+    width: 100%;
+    background-color:  #B2D7F5;
+}
+
+/*adjust nav bar position */
+
+
+nav{
+    height: 50px;
+
+}
+
+nav > ul {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+/* remove points and adjust position */
+
+footer{
+    padding-bottom: 50px;
+    background-color: #186DB4;
+} /*add space so nav bar doesn't cover footer, and background color*/
+
+
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/homework/weather/images/sunnycity.jpg");
+} /*put items vertically and center it*/
+
+
+
+#current-condition{
+    flex: 1 auto;
+    display: flex;
+    flex-flow: column wrap;
+
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 5px;
+
+} /*provide the box to be organized and position it with the temperature*/
+
+.title {
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 5px;
+}
+/*add the box for the title*/
+
+.wind{
+    display: flex;
+    justify-content: space-around;
+}
+.precipitation{
+    display: flex;
+    justify-content: space-around;
+}
+#current-condition {
+    display: none;
+}
+
+/*Hides the title and makes the conditoins box smaller*/
+
+
+
+#quick-look{
+
+    flex: 1 auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+/* organize information into a box*/
+
+
+
+.temperature{
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 200px;
+
+}
+.temperature h2, h3{
+    font-family: 'Droid Sans', sans-serif;
+}
+/* reorganize the temperature information  for the quick look box*/
+
+
+#forecast{
+    display: flex;
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 5px;
+    flex-direction: column;
+    width: 90%;
+
+
+}
+.hour ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+   align-content: space-between;
+    overflow: auto;
+}
+.hour ul li{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 10px;
+    font-size: 20px;
+}
+
+/*hide the data*/
+
+
+
+h1{
+    font-size: 2em;
+}
+h1 a {
+    font-size: 1em;
+}
+
+span {
+    margin: auto;
+}
+
+
+nav a:link {
+    text-decoration: none;
+    color: #47556F;
+}
+nav a:visited {
+    text-decoration: none;
+    color: #4A4653;
+}
+nav a:hover {
+    text-decoration: none;
+    color: #E7EF61;
+}
+nav a:active {
+    color: #A6D8DB;
+}
+/* changesthe links  color according to action*/
+
+header{
+    background-color: #186DB4;
+    padding-top: 1px;
+}
+
+/*change background colors*/
+
+.cur-temp > h2{
+    font-size: 2em;
+}
+.title > h2 {
+    font-size: 1.3em;
+}
+
+/*adjust various text sizes*/
+
+.wthr-icon {
+    font-size: 3em;
+}
+
+
+/* Makes the page responsive*/
+
+@media (min-width: 500px) {
+
+
+    #content {
+        flex-flow: row wrap;
+        align-items: stretch;
+
+    }
+    /*Adjust flexbox direction*/
+
+    .col-title > h2{
+        font-size: 1.6em;
+    }
+    .title > h2 {
+        font-size: 1.6em;
+    }
+
+    /* adjusts title boxes. */
+    #current-condition {
+        display: initial;
+        flex: 1 0 40%;
+        margin-right: 50px;
+
+    }
+    #quick-look {
+        flex: 1 0 45%
+    }
+
+    /*adjust the content boxes*/
+
+
+
+    #content {
+        background-color: #599FD9;
+    }
+/*set the background colors*/
+
+
+    #content > div{
+        max-height: 350px;
+    }
+
+    /*set the max height for the columns and lets the Forecast column into scolling*/
+
+
+
+    body {
+        width: 95%;
+        max-width: 775px;
+        margin: auto;
+    }
+    /*limits the sets the mad body width*/
+
+    p {
+        font-size: 24px;
+    }
+    /*Adjusts the font size for current conditions*/
+}
