@@ -8,7 +8,7 @@ var instructions = [
         "choiceText": "choose 1",
         "title": "The Adventure Begins",
         "description": "This is where you setup your initial story",
-        "ending" : false
+        "ending" : 'none'
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@ var instructions = [
         "choiceText": "Go Left",
         "title": "The long hallway",
         "description": "You walk down a long stone hallway, but feel uneasy.",
-        "ending" : false
+        "ending" : 'none'
     },
     {
         "id": 3,
@@ -30,7 +30,7 @@ var instructions = [
         "choiceText": "Go Right",
         "title": "The hungry beast",
         "description": "This is probably not going to end well.",
-        "ending" : true
+        "ending" : 'bad'
     },
     {
         "id": 4,
@@ -40,19 +40,63 @@ var instructions = [
         },
         "choiceText": "Keep walking",
         "title": "Treasure room",
-        "description": "You find a treasure and Live a hapy life.",
-        "ending" : true
+        "description": "You find a treasure room and live a happy life.",
+        "ending" : 'good'
     },
     {
         "id": 5,
         "choices": {
-            "first": 10,
-            "second": 11
+            "first": 6,
+            "second": 7
         },
         "choiceText": "Turn Around",
         "title": "The hungry beast",
         "description": "This is probably not going to end well.",
-        "ending" : true
+        "ending" : 'bad'
+    },
+    {
+        "id": 6,
+        "choices": {
+            "first": 0,
+            "second": 0
+        },
+        "choiceText": "You Died... THE END",
+        "title": "The hungry beast",
+        "description": "This is probably not going to end well.",
+        "ending" : 'bad'
+    },
+    {
+        "id": 7,
+        "choices": {
+            "first": 0,
+            "second": 0
+        },
+        "choiceText": "Press restart to Try Again",
+        "title": "The hungry beast",
+        "description": "This is probably not going to end well.",
+        "ending" : 'bad'
+    },
+    {
+    "id": 8,
+    "choices": {
+    "first": 0,
+    "second": 0
+    },
+    "choiceText": "YOU FIND THE TREASURE AND LIVE A HAPPY LIVE",
+    "title": "Treasure room",
+    "description": "You find a treasure room and live a happy life.",
+    "ending" : 'good'
+    },
+    {
+        "id": 9,
+        "choices": {
+            "first": 0,
+            "second": 0
+        },
+        "choiceText": "THE END",
+        "title": "Treasure room",
+        "description": "You find a treasure room and live a happy life.",
+        "ending" : 'good'
     }
 ];
 
@@ -82,7 +126,7 @@ function nextStep(id) {
     updateButton('buttonOne', choice1.id);
     updateButton('buttonTwo', choice2.id);
     //check to see if the story is at the end
-    checkEnd(instruction);
+    end(instruction);
 }
 
 //1. create the getItem, updateElement, and updateButton functions
@@ -92,7 +136,7 @@ function nextStep(id) {
 //write a for statement to check each set of instruction
 
 function getItem(item, id) {
-    for(i = 0; i < item.length; i++){
+    for( var i = 0; i < item.length; i++){
 
     if(id == item[i].id){
     return item[i];
@@ -121,14 +165,11 @@ function updateButton(button, choice){
 //restart: resets the game back to the beginning.
 function restart() {
     nextStep(1);
+    document.getElementById('end').innerHTML = '';
 }
 
 //happy ending: does whatever we want it to do when they end in a good place
 
 //sad ending: does whatever we want it to do if they end at a bad place
-function checkEnd(item) {
-    if(item.ending == true) {
-        document.getElementById('end').innerHTML = "THE END";
-    }
-}
+
 // Lynette Warnberg
