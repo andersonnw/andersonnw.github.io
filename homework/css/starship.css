@@ -1,0 +1,20 @@
+main {
+    display: flex;
+}
+
+#space-list {
+    list-style-type: none;
+}
+
+#data {
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    overflow: auto;
+    height: 200px;
+    overflow-x: scroll;
+    overflow-y: auto;
+
+}
