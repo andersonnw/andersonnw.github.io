@@ -2,38 +2,139 @@
 
 <html lang="en">
 
-<head>
-<meta charset="utf-8">
-<title>Get The Weather!</title>
-<meta name="description" content="weather">
-<meta name="viewport" content="width=device-width">
+    <head>
+        <meta charset="utf-8">
+        <title>Get The Weather!</title>
+        <meta name="description" content="weather">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/greenvill.css">
+    </head>
 
-</head>
+    <body>
+        <div id="everything">
+            <header>
 
-<body>
-<header>
-<img src="images/logo-blue.jpg" alt="logo">
-<h1>Get the Weather!</h1>
-<nav>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="franklin.html">Franklin</a></li>
-<li><a href="greenville.html">Greenville</a></li>
-<li><a href="springfield.html">Springfield</a></li>
-<li><a href="search.html">Search</a></li>
-</ul>
-</nav>
+                <div id="title-bar">
+                    <div class="logo">
 
-</header>
-<main>
+                        <h1>&#9856; <a class="rotate25">&#9861; </a> Feeling Lucky?</h1>
+                    </div>
+                </div>
 
-</main>
-<footer>
-&copy;2017 Niles Anderson
-</footer>
+                <div class="sub-title">
+                    <h3>Local Weather</h3>
+                </div>
 
 
-</body>
+                <div id="nav-bar">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a> </li>
+
+                            <li><a href="franklin.html">Franklin</a></li>
+
+                            <li><a href="greenville.html">Greenville</a></li>
+
+                            <li><a href="springfield.html">Springfield</a></li>
+
+                            <li><a href="search.html">Search</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main>
+
+                <div id="content">
+
+
+
+                    <div id="quick-look">
+
+
+                        <div class="title">
+                            <h2 id="cityDisplay">
+                 
+                            </h2>
+
+                        </div>
+                        <div class="temperature">
+                            <div class="cur-temp">
+                                <h2 id="currentTemp"> </h2>
+                            </div>
+                            <img id="wthr-icon" alt="icon">
+                           
+
+                        </div>
+
+                    </div>
+
+                    <div id="current-condition">
+
+                        <div class="col-title">
+
+                            <h2>
+                                &#9856; Current Condition
+                            </h2>
+
+                        </div>
+                        <div class="wind">
+                            <h2> Wind</h2>
+
+                            <div class="wind-info">
+                                <p id="add2"> </p>
+                                <p id="add3"></p>
+                            </div>
+                        </div>
+
+                        <div class="precipitation">
+                            <div class="precip-t">
+                                <h2>Precipitation</h2>
+                            </div>
+                            <div class="inches">
+                                <p id="precip"></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div id="forecast">
+                        <div class="col-title">
+
+
+
+                            <h2>
+                                &#9856; Hourly Forecast
+                            </h2>
+
+                        </div>
+                        <div class="hour">
+                            <ul id="hourly">
+                                <li> <span class="data"></span> <span></span> <span> </span>   </li>
+                            
+
+                            </ul>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div id="copyright">
+                    &copy;2017 Niles Anderson
+                </div>
+<script src="js/lookup.js"></script>
+                <div id="link">
+                    <a href="http://andersonnw.github.io/">Link to Homepage</a>
+                </div>
+            </footer>
+        </div>
+
+
+    </body>
 
 
 

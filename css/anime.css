@@ -1,0 +1,53 @@
+
+/*inmports the font and applies it*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import url('https://fonts.googleapis.com/css?family=Droid-Serif');
+
+* {
+    font-family: 'Droid Serif', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+/* create logo*/
+#logo {
+    display: flex;
+    flex-flow: row;
+}
+
+/*sets ups the nav bar*/
+nav a:link {
+    text-decoration: none;
+    color: #a1b3d1;
+}
+nav a:visited {
+    text-decoration: none;
+    color: #a1b3d1;
+}
+nav a:hover {
+    text-decoration: none;
+    color: #2AEDF9;
+}
+nav a:active {
+    color: #2AEDF9;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    
+}
+nav li {
+    list-style-type: none;
+
+}
+
+header, footer {
+    background-color: #427edd;
+}
+
+.info-box img {
+    height: 242px;
+    width: 167;
+}
