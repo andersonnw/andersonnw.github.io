@@ -8,6 +8,7 @@
     <meta name="description" content="anime|manga|otaku|japan">
     <meta name="viewport" content="width=device-width">
     <link rel='stylesheet' href="css/anime.css">
+    <link rel="stylesheet" href="css/news.css">
 
 </head>
 
@@ -15,37 +16,27 @@
 
     <header>
         <div id="logo"><img src="../andersonnw.github.io/images/logo.png" alt="logo" height="60" width="60">
-        <h1>Ani-Neko!</h1>
+            <h1>Ani-Neko!</h1>
         </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="links.html">Links</a></li>
-                <li><a href ='news.html'>News</a></li>
-                <li><a href ='now.html'>Now</a></li>
-                <li><a href ='reco.html'>Recommendations</a></li>
+                <li><a href='news.html'>News</a></li>
+                <li><a href='now.html'>Now</a></li>
+                <li><a href='reco.html'>Recommendations</a></li>
             </ul>
         </nav>
 
     </header>
 
     <main>
+        <!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="36860/"></script> <!-- end feedwind code -->
 
-        <select id="media" onchange="getNow()">
-            <option>Anime</option>
-            <option>Manga</option>
-            <option>Movies</option>
-        </select>
-        
-        <ul id="list">
-        </ul>
-      
-
-
+<script src='js/news.js'></script>
     </main>
 
     <footer>
-        <script src="js/reco.js"></script>
         &copy;2017 Niles Anderson <a href="homework/index.html">Homework page</a> <a href="homework/project-prop.html">Project proposal page</a>
     </footer>
 </body>

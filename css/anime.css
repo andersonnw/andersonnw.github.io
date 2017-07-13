@@ -2,7 +2,7 @@
 /*inmports the font and applies it*/
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-@import url('https://fonts.googleapis.com/css?family=Droid-Serif');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif');
 
 * {
     font-family: 'Droid Serif', sans-serif;
