@@ -49,5 +49,99 @@ header, footer {
 
 .info-box img {
     height: 242px;
-    width: 167;
+    width: 167px;
 }
+
+/*css for the now and reco page*/
+#now_list {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.box  > p{
+    display: none;
+}
+.box {
+    list-style-type: none;
+    display: flex;
+    height: 400px;
+    width: 450px;
+    flex-flow: row wrap;
+    padding: 30px;
+    
+}
+.box  > a {
+    width: 100%;
+}
+
+
+
+#anime, #movie, #manga {
+    display: none;
+}
+.movie, .manga {
+    display: none;
+}
+
+.anime, .manga, .movie{
+    list-style-type: none;
+    display: flex;
+    height: 400px;
+    width: 450px;
+    flex-flow: row wrap;
+    padding: 30px;
+}
+.anime, .manga, .movie > p {
+    display: none;
+}
+.anime, .manga, .movie > a {
+    width: 100%;
+}
+
+.website > img {
+    width: 300px;    
+    }
+
+@media screen and (min-width: 558px){
+    
+ .box > p {
+        display: initial;
+        height: 300px;
+        width: 200px;
+        overflow: auto;
+     
+    }
+    main {
+        width: 95%;
+        max-width: 1090px;
+        margin: auto;
+    }
+    
+    .anime, .manga, .movie {
+        display: initial;
+        height: 300px;
+        width: 200px;
+        overflow: auto;
+    }
+    
+    .manga, .movie {
+        display: none;
+    }
+
+    .website > img {
+    width: 600px;    
+    }
+    .website{
+        width: 60%;
+        
+    }
+    
+}
+
+@media screen and (min-width: 800px){
+    .website {
+        margin: auto;
+    }
+}
+
+

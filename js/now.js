@@ -42,6 +42,7 @@ function getJSON(url) {
                
             syn.innerHTML = airing.synopsis;
                
+            box.setAttribute('class', 'box');
             box.appendChild(title);
             box.appendChild(img);
             box.appendChild(syn);

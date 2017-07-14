@@ -19,11 +19,12 @@ function getJSON(url) {
         var results = data;
         console.log(results);
         
-        var nowList = document.getElementById('list');
+        var nowList = document.getElementById('now_list');
         var choice = document.getElementById('media');
       
         
         results.anime.forEach(function(airing){
+            if(airing.air == false){
             //filter the list to only those that are currently airing
             
         
@@ -35,7 +36,7 @@ function getJSON(url) {
             
             
             // puts the data into the new elements
-            box.setAttribute('class', 'anime');
+            
             
             title.setAttribute('href', airing.link_url);
             title.innerHTML = airing.link;
@@ -44,12 +45,14 @@ function getJSON(url) {
             img.setAttribute('alt', airing.link);
                
             syn.innerHTML = airing.synopsis;
-               
+            
+                box.setAttribute('class', 'anime');
+           
             box.appendChild(title);
             box.appendChild(img);
             box.appendChild(syn);
             nowList.appendChild(box);
-            
+            }
         });
         
          results.movie.forEach(function(airing){
@@ -64,8 +67,7 @@ function getJSON(url) {
             
             
             // puts the data into the new elements
-            box.setAttribute('class', 'movie');
-             
+         
             title.setAttribute('href', airing.link_url);
             title.innerHTML = airing.link;
             
@@ -73,7 +75,9 @@ function getJSON(url) {
             img.setAttribute('alt', airing.link);
                
             syn.innerHTML = airing.synopsis;
-               
+           
+             box.setAttribute('class', 'movie');
+             
             box.appendChild(title);
             box.appendChild(img);
             box.appendChild(syn);
@@ -93,7 +97,6 @@ function getJSON(url) {
             
             
             // puts the data into the new elements
-            box.setAttribute('class', 'manga');
              
             title.setAttribute('href', airing.link_url);
             title.innerHTML = airing.link;
@@ -102,7 +105,9 @@ function getJSON(url) {
             img.setAttribute('alt', airing.link);
                
             syn.innerHTML = airing.synopsis;
-               
+            
+             box.setAttribute('class', 'manga');
+            
             box.appendChild(title);
             box.appendChild(img);
             box.appendChild(syn);
@@ -113,5 +118,69 @@ function getJSON(url) {
     
         });
     }());
+function display(){
+
+    var media = document.getElementById('media');
+    var anime = document.getElementById('anime');
+    var movie = document.getElementById('movie');
+    var manga = document.getElementById('manga');
+    
+    var anime1 = document.getElementsByClassName('anime');
+    var movie1 = document.getElementsByClassName('movie');
+    
+    var manga1 = document.getElementsByClassName('manga');
+    
+    console.log(anime1);
+    if(media[media.selectedIndex].value == 'anime'){
+        anime.style.display = 'initial';
+        manga.style.display = 'none';
+        movie.style.display = 'none';
+        
+        for(var i = 0; i <= anime1.length - 1; i++){
+            anime1[i].style.display = 'initial';
+        }
+        for(var i = 0; i <= manga1.length - 1; i++){
+            manga1[i].style.display = 'none';
+        }
+        for(var i = 0; i <= movie1.length - 1; i++){
+            movie1[i].style.display = 'none';
+        }
+       
+    }
+    else if(media[media.selectedIndex].value == 'movie') {
+        anime.style.display = 'none';
+        manga.style.display = 'none';
+        movie.style.display = 'initial';
+        
+        for(var i = 0; i <= anime1.length - 1; i++){
+            anime1[i].style.display = 'none';
+        }
+        
+        for(var i = 0; i <= movie1.length - 1; i++){
+            movie1[i].style.display = 'initial';
+        }
+        for(var i = 0; i <= manga1.length - 1; i++){
+            manga1[i].style.display = 'none';
+        }
+       
+    }
+    else if(media[media.selectedIndex].value == 'manga'){
+        anime.style.display = 'none';
+        manga.style.display = 'initial';
+        movie.style.display = 'none';
+        
+        for(var i = 0; i <= anime1.length - 1; i++){
+            anime1[i].style.display = 'none';
+        }
+        
+        for(var i = 0; i <= manga1.length - 1; i++){
+            manga1[i].style.display = 'initial';
+        }
+        for(var i = 0; i <= movie1.length - 1; i++){
+            movie1[i].style.display = 'none';
+        }
+    }
+}
+display();
 
     

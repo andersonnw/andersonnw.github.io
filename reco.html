@@ -30,14 +30,22 @@
     </header>
 
     <main>
+        <article>
+            <h2>Recommendations!</h2>
+            <p>These are some of our Ani-Neko staffs favorites. Use the drop-down to select a media type. </p>
+        </article>
 
-        <select id="media" onchange="getNow()">
-            <option>Anime</option>
-            <option>Manga</option>
-            <option>Movies</option>
+        <select id="media" onchange="display();">
+            <option value="anime">Anime</option>
+            <option value="manga">Manga</option>
+            <option value="movie">Movies</option>
         </select>
         
-        <ul id="list">
+        <h2 id="anime">Anime</h2>
+        <h2 id="movie">Movies</h2>
+        <h2 id="manga">Manga</h2>
+        
+        <ul id="now_list">
         </ul>
       
 
@@ -45,6 +53,7 @@
     </main>
 
     <footer>
+        
         <script src="js/reco.js"></script>
         &copy;2017 Niles Anderson <a href="homework/index.html">Homework page</a> <a href="homework/project-prop.html">Project proposal page</a>
     </footer>
