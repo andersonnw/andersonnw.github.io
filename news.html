@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel='stylesheet' href="css/anime.css">
     <link rel="stylesheet" href="css/news.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -33,16 +33,25 @@
     <main>
         <div class="website">
         <h2>News</h2>
-        <p>Here is the latest RSS News feed from Anime News Network</p>
+        <p>Here is the latest RSS News feed from Anime News Network.</p>
+        <p>News Provided by <a href="http://www.animenewsnetwork.com">Anime News Network</a> </p>
         </div>
         
-        <!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="36860/"></script> <!-- end feedwind code -->
-        <a href="http://www.animenewsnetwork.com">anime news network</a>
+        <ul id="news">
+        
+        </ul>
+        
+        
+        <!-- start feedwind code  <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="36860/"></script> <!-- end feedwind code -->
+       
+        
+        
 
-<script src='js/news.js'></script>
+
     </main>
 
     <footer>
+        <script src='js/news.js'></script>
         &copy;2017 Niles Anderson <a href="homework/index.html">Homework page</a> <a href="homework/project-prop.html">Project proposal page</a>
     </footer>
 </body>
