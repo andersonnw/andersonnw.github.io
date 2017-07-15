@@ -130,7 +130,7 @@ function display(){
     
     var manga1 = document.getElementsByClassName('manga');
     
-    console.log(anime1);
+
     if(media[media.selectedIndex].value == 'anime'){
         anime.style.display = 'initial';
         manga.style.display = 'none';
@@ -143,8 +143,9 @@ function display(){
             manga1[i].style.display = 'none';
         }
         for(var i = 0; i <= movie1.length - 1; i++){
-            movie1[i].style.display = 'none';
+            movie1[i].style.display = 'none';   
         }
+        
        
     }
     else if(media[media.selectedIndex].value == 'movie') {

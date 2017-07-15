@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*sets ups the nav bar*/
+
 nav a:link {
     text-decoration: none;
     color: #a1b3d1;
@@ -34,7 +35,7 @@ nav a:active {
 }
 nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: auto;
     
 }
@@ -56,6 +57,7 @@ header, footer {
 #now_list {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .box  > p{
@@ -79,11 +81,9 @@ header, footer {
 #anime, #movie, #manga {
     display: none;
 }
-.movie, .manga {
-    display: none;
-}
 
-.anime, .manga, .movie{
+
+.anime, .manga, .movie {
     list-style-type: none;
     display: flex;
     height: 400px;
@@ -91,9 +91,7 @@ header, footer {
     flex-flow: row wrap;
     padding: 30px;
 }
-.anime, .manga, .movie > p {
-    display: none;
-}
+
 .anime, .manga, .movie > a {
     width: 100%;
 }
@@ -102,6 +100,24 @@ header, footer {
     width: 300px;    
     }
 
+/*fixes the problem that displays everything instead of just anime at the start*/
+.anime, .manga, .movie  {
+        display: initial;
+        height: 300px;
+        width: 220px;
+        overflow: auto;
+    }
+
+.anime, .manga, .movie {
+    display: initial:
+}
+.manga, .movie {
+    display: none;
+}
+
+
+
+/*make the screen dynamic*/
 @media screen and (min-width: 558px){
     
  .box > p {
@@ -117,12 +133,7 @@ header, footer {
         margin: auto;
     }
     
-    .anime, .manga, .movie {
-        display: initial;
-        height: 300px;
-        width: 200px;
-        overflow: auto;
-    }
+    
     
     .manga, .movie {
         display: none;

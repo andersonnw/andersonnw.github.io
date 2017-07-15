@@ -1,0 +1,9 @@
+.anime, .manga, .movie > p {
+    display: none;
+}
+
+@media screen and (min-width: 558px) {
+    .anime, .manga, .movie p {
+    display: initial;
+}
+}
